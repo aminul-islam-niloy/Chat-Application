@@ -2,11 +2,13 @@ import { Component, OnInit, inject } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ChatService } from '../chat.service';
+import { MaterialModule } from '../material.module';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-join-room',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, MaterialModule, CommonModule],
   templateUrl: './join-room.component.html',
   styleUrls: ['./join-room.component.css']
 })

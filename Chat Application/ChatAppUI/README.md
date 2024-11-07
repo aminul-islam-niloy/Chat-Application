@@ -30,3 +30,4 @@ ng new chatappUI
 npm install @microsoft/signalr
 npm install ng-angular-popup
 npm install bootstrap
+npm add @metarialui

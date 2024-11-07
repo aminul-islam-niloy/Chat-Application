@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { MaterialModule } from './material.module';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     RouterOutlet, 
     ReactiveFormsModule,
-    HttpClientModule  
+    MaterialModule,CommonModule,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']  

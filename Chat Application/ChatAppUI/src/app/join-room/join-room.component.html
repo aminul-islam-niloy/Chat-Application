@@ -1,27 +1,40 @@
+<mat-toolbar color="primary" class="toolbar">
+    <button mat-icon-button aria-label="Menu button">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Chat App</span>
+    <span class="spacer"></span>
+    <button mat-icon-button aria-label="Favorite button">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button aria-label="Share button">
+      <mat-icon>share</mat-icon>
+    </button>
+</mat-toolbar>
+  
 <div class="container">
-      <div class="card col-md-6 w-100" style="justify-content: center;">
-        <h2 class=" text-dark mt-5">Welcome to ChatHUB</h2>
-        <div class="text-center mb-5 text-dark">Please Join the Room to start Chatting</div>
-      
+    <mat-card class="card">
+      <p class="subtitle">Please join the room to start chatting</p>
   
-          <form [formGroup]="joinRoomForm" class="card-body cardbody-color p-lg-5">
+      <div class="avatar-container">
+        <img src="https://cdn-icons-png.flaticon.com/512/9165/9165147.png"
+             class="profile-image" alt="profile">
+      </div>
   
-            <div class="text-center">
-              <img src="https://cdn-icons-png.flaticon.com/512/9165/9165147.png"
-                class="img-fluid profile-image-pic img-thumbnail rounded-circle my-3" width="200px" alt="profile">
-            </div>
+      <form [formGroup]="joinRoomForm" (ngSubmit)="joinRoom()">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Display Name</mat-label>
+          <input matInput formControlName="user" placeholder="Display Name">
+        </mat-form-field>
   
-            <div class="mb-3">
-              <input formControlName="user" type="text" class="form-control" id="displayname" aria-describedby="emailHelp"
-                placeholder="Display Name">
-            </div>
-            <div class="mb-3">
-              <input formControlName="room" type="text" class="form-control" id="roomname" placeholder="Room Name">
-            </div>
-            <div class="text-center">
-              <button [disabled]="joinRoomForm.invalid" (click)="joinRoom()" type="submit" class="btn btn-color px-5 mb-5 w-100">Join</button>
-            </div>
-          </form>
-        </div>
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Room Name</mat-label>
+          <input matInput formControlName="room" placeholder="Room Name">
+        </mat-form-field>
   
-  </div>
+        <button mat-raised-button color="primary" [disabled]="joinRoomForm.invalid" class="submit-button">
+          Join
+        </button>
+      </form>
+    </mat-card>
+</div>
