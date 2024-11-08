@@ -87,24 +87,54 @@
           </ng-container>
         </div>
 
-        <!-- <div class="type_msg">
-            <div class="input_msg_write">
-              <input (keydown.enter)="sendMessage()" [(ngModel)]="inputMessage" type="text" class="write_msg"
-                placeholder="Type a message" />
-              <button (click)="sendMessage()" class="msg_send_btn" type="button"><i class="fa fa-paper-plane-o"
-                  aria-hidden="true"></i></button>
-            </div>
-          </div> -->
+        <div class="inputTextDiv"
+          style="
+            display: flex;
+            align-items: center;
+            width: 100%;
+            max-width: 800px;
+            padding: 8px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 24px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+          "
+        >
+          <input
+            (keydown.enter)="sendMessage()"
+            [(ngModel)]="inputMessage"
+            type="text"
+            style="
+              flex: 1;
+              border: none;
+              outline: none;
+              font-size: 16px;
+              padding: 12px;
+              border-radius: 24px;
+              background-color: #f4f4f8;
+              margin-right: 8px;
+            "
+          />
 
-          <div class="type_msg">
-            <div class="input_msg_write">
-              <input (keydown.enter)="sendMessage()" [(ngModel)]="inputMessage" type="text" class="write_msg"
-                placeholder="Type a message" />
-              <button (click)="sendMessage()" class="msg_send_btn" type="button"> <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#0000F5"><path d="M120-160v-640l760 320-760 320Zm80-120 474-200-474-200v140l240 60-240 60v140Zm0 0v-400 400Z"/></svg> </button>
-            </div>
-          </div>
-
-
+          <button
+            type="button"
+            (click)="sendMessage()"
+            style="
+              padding: 12px 16px;
+              border: none;
+              outline: none;
+              border-radius: 50%;
+              background-color: #777e77;
+              color: white;
+              font-weight: bold;
+              cursor: pointer;
+              transition: background-color 0.3s;
+            "
+          >
+            ➤
+          </button>
+        </div>
       </div>
     </div>
   </div>

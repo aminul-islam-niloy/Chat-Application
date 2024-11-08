@@ -21,7 +21,7 @@
 
   
   .inbox_people {
-    background-color: #f7e7f7;
+    background-color: #ddedf0;
     float: left;
     overflow: hidden;
     width: 40%;
@@ -29,16 +29,12 @@
   }
 
 
-  
   .inbox_msg {
     border: 1px solid #c4c4c4;
     clear: both;
     overflow: hidden;
   }
 
-
-  
-  
   .top_spac {
     margin: 10px 0 0;
   }
@@ -109,14 +105,15 @@
   .profileimages2{
     width: 30px;
     height: 30px;
-    margin-left: 10px;
+    margin-left: 15px;
+    margin-bottom: 30px;
   }
   .chat-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #dce9f8; 
+    background-color: #f6f6f6; 
     color: rgb(0, 0, 0); 
     font-family: Arial, sans-serif; 
   }
@@ -255,12 +252,18 @@
   
   
   .input_msg_write input {
-    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-    border: medium none;
+   
     color: #4c4c4c;
     font-size: 15px;
     min-height: 48px;
     width: 100%;
+    margin:5px;
+    padding: 5px;
+  }
+
+  .write_msg{
+    margin-left: 25px;
+    padding: 5px;
   }
   
 
@@ -270,10 +273,11 @@
   }
   
   .msg_history {
-    height: 550px;
+    height: 530px;
     overflow-y: auto;
     padding: 10px; 
   }
+
 
   .inbox_people {
     float: left;
@@ -295,15 +299,16 @@
   }
   
   .msg_send_btn {
-    color: #000000;
     cursor: pointer;
     font-size: 17px;
-    height: 33px;
     position: absolute;
     right: 0;
     top: 11px;
     width: 70px;
   }
+
+
+
   
  
 
