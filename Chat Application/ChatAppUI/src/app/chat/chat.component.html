@@ -1,7 +1,7 @@
 <div class="container mt-5">
 
     <div class="chat_header">
-      <h3 class="text-center my-2">Welcome to <span class="text-warning">{{roomName}}</span> Group</h3>
+      <h4 class="text-center my-2" style="margin-left: 20px;">Welcome to <span class="text-warning">{{roomName}}</span> Group</h4>
       <button (click)="leaveChat()" class="btn btn-danger">Leave Chat</button>
     </div>
     <div class="messaging">
@@ -12,12 +12,7 @@
               <h4 class="text-white">Connected Users</h4>
             </div>
             <div class="srch_bar">
-              <div class="stylish-input-group">
-                <input type="text" class="search-bar" placeholder="Search">
-                <span class="input-group-addon">
-                  <button type="button"> <i class="fa fa-search" aria-hidden="true"></i> </button>
-                </span>
-              </div>
+             
             </div>
           </div>
           <div class="inbox_chat">
@@ -25,7 +20,7 @@
   
               <div class="chat_list">
                 <div class="chat_people">
-                  <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                  <div class="chat_img"> <img class="profileimages" src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
                   <div class="chat_ib mt-3">
                     <h5>{{user}} <span class="online"></span></h5>
                   </div>
@@ -40,7 +35,7 @@
               <div
                 [ngClass]="{'incoming_msg': message.user != loggedInUserName, 'outgoing_msg': message.user === loggedInUserName}">
                 <div *ngIf="message.user != loggedInUserName" class="incoming_msg_img">
-                  <img src="https://ptetutorials.com/images/user-profile.png">
+                  <img class="profileimages" src="https://ptetutorials.com/images/user-profile.png">
                 </div>
                 <div *ngIf="message.user != loggedInUserName" class="received_msg">
                   <div class="received_withd_msg">

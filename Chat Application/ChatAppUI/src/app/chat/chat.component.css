@@ -1,7 +1,6 @@
 .container {
-    max-width: 1170px;
     margin: auto;
-    background-color: #f0dcdc;
+    background-color: #fffefe;
     
   }
   
@@ -34,27 +33,29 @@
     background: green;
   }
   
-  img {
-    max-width: 100%;
-  }
+ 
   
   .inbox_people {
-    background-color: #ebc6ed;
-    
+    background-color: #f7e7f7;
     float: left;
     overflow: hidden;
     width: 40%;
     border-right: 1px solid #c4c4c4;
   }
+
+
   
   .inbox_msg {
     border: 1px solid #c4c4c4;
     clear: both;
     overflow: hidden;
   }
+
+
+  
   
   .top_spac {
-    margin: 20px 0 0;
+    margin: 10px 0 0;
   }
   
   
@@ -63,12 +64,6 @@
     width: 40%;
   }
   
-  .srch_bar {
-    display: inline-block;
-    text-align: right;
-    width: 60%;
-  
-  }
   
   .headind_srch {
     padding: 10px 29px 10px 20px;
@@ -78,7 +73,7 @@
   
   .recent_heading h4 {
     color: #05728f;
-    font-size: 20px;
+    font-size: 16px;
     margin: auto;
   }
   
@@ -119,6 +114,11 @@
     color: #989898;
     margin: auto
   }
+
+  .profileimages{
+    width: 30px;
+    height: 30px;
+  }
   
   .chat_img {
     float: left;
@@ -139,7 +139,7 @@
   .chat_list {
     border-bottom: 1px solid #c4c4c4;
     margin: 0;
-    padding: 18px 16px 10px;
+    padding: 7px 10px 5px;
   }
   
   .inbox_chat {
@@ -247,3 +247,18 @@
     height: 516px;
     overflow-y: auto;
   }
+
+  .inbox_people {
+    float: left;
+    width: 30%;
+  }
+  
+  .mesgs {
+    float: left;
+    width: 60%;
+  }
+  
+  .inbox_msg {
+    display: flex;
+  }
+  
