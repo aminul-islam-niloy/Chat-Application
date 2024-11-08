@@ -1,0 +1,40 @@
+<mat-toolbar color="primary" class="toolbar">
+    <button mat-icon-button aria-label="Menu button">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Chat App</span>
+    <span class="spacer"></span>
+    <button mat-icon-button aria-label="Favorite button">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button aria-label="Share button">
+      <mat-icon>share</mat-icon>
+    </button>
+</mat-toolbar>
+  
+<div class="container">
+    <mat-card class="card">
+      <p class="subtitle">Please join the room to start chatting</p>
+  
+      <div class="avatar-container">
+        <img src="https://cdn-icons-png.flaticon.com/512/9165/9165147.png"
+             class="profile-image" alt="profile">
+      </div>
+  
+      <form [formGroup]="joinRoomForm" (ngSubmit)="joinRoom()">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Display Name</mat-label>
+          <input matInput formControlName="user" placeholder="Display Name">
+        </mat-form-field>
+  
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Room Name</mat-label>
+          <input matInput formControlName="room" placeholder="Room Name">
+        </mat-form-field>
+  
+        <button mat-raised-button color="primary" [disabled]="joinRoomForm.invalid" class="submit-button">
+          Join
+        </button>
+      </form>
+    </mat-card>
+</div>

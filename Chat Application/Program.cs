@@ -6,8 +6,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
 builder.Services.AddSignalR();
+
+
+
+
+// Register your RoomConnection as a singleton
 builder.Services.AddSingleton<IDictionary<string, RoomConnection>>(opt =>
     new Dictionary<string, RoomConnection>());
 
@@ -31,19 +35,13 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
-app.MapControllers();
-
-
-app.UseRouting();
 app.UseCors();
+app.UseRouting();
 app.UseEndpoints(endpoint =>
 {
     endpoint.MapHub<ChatHub>("/chat");
 });
+
+app.MapControllers();
 
 app.Run();
